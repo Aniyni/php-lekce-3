@@ -24,18 +24,29 @@
         <tr>
             <th>Předmět</th>
             <th>Známka</th>
+        <?php
+        $soucet = 0;
+        $pocetznamek = 0;
+        foreach ($predmety as $pred => $hodnota){
+            echo "
         </tr>
         </thead>
         <tbody>
             <tr>
-                <td>prvni sloupec</td>
-                <td>druhy sloupec</td>
-            </tr>
+                <td>$pred</td>
+                <td>$hodnota</td>
+            </tr>";
+            $soucet = $soucet + $hodnota; //můžu to zapsat i jako $soucet += $hodnota;
+            $pocetznamek++; //alternativní zápis $pocetznamek = $pocetznamek + 1;
+        }
+            ?>
         </tbody>
     </table>
 
-    Průměr:
+    Průměr:<?php
+    echo ($soucet/$pocetznamek);
 
+?>
 </div>
 </body>
 </html>
