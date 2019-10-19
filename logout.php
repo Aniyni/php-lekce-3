@@ -17,7 +17,7 @@ session_start()
 <div class="container">
 
     <?php
-    unset($_SESSION);
+   session_destroy();
     echo 'Odhlášení proběhlo úspěšně'
     ?>
 <br>

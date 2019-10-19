@@ -18,25 +18,26 @@ session_start()
 <div class="container">
 
     <?php
-    $data = 0;
-    if ($_SESSION['login'] = true){
+
+    if (isset($_SESSION['login']['data'])) {
         echo 'Vítejte' . $_SESSION['login'];
-                }
     echo '<br>';
     if ($_SESSION['login'] = true) {
-        foreach ($_SESSION['data'] as $data=> $údaje) {
+        foreach ($_SESSION['data'] as $data => $údaje) {
             echo "<br>";
-            echo $data ++;
+            echo $data++;
             echo ":";
             echo " ";
             echo $údaje;
+            $data = 0;
 
         }
+    }
         echo "<br>";
         echo '<br>';
         echo "<a href=\"logout.php\">ODHLÁSIT</a></p>";
     }
-    else echo 'Přístup zamítnut'
+    else echo 'Přístup zamítnut';
     ?>
 
 </div>
