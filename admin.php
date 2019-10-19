@@ -19,8 +19,8 @@ session_start()
 
     <?php
 
-    if (isset($_SESSION['login']['data'])) {
-        echo 'Vítejte' . $_SESSION['login'];
+    if (isset($_SESSION['login'])) {
+        echo 'Vítejte' . ' ' . $_SESSION['login'];
     echo '<br>';
     if ($_SESSION['login'] = true) {
         foreach ($_SESSION['data'] as $data => $údaje) {
